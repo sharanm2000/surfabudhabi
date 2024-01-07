@@ -1,0 +1,750 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden; /* or auto */
+ }
+
+/* fonts */
+@font-face {
+    font-family: 'raleway';
+    src: url('./assets/images_fonts/Fold-1/fonts/Raleway-ExtraBold.woff2') format('woff2'),
+         url('./assets/images_fonts/Fold-1/fonts/Raleway-ExtraBold.woff') format('woff'),
+         url('./assets/images_fonts/Fold-1/fonts/Raleway-ExtraBold.ttf') format('truetype'),
+         url('./assets/images_fonts/Fold-1/fonts/Raleway-ExtraBold.eot') format('embedded-opentype'),
+         url('./assets/images_fonts/Fold-1/fonts/Raleway-ExtraBold.svg') format('svg')
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('./assets/images_fonts/Fold-1/fonts/Poppins-Regular.woff2') format('woff2'),
+         url('./assets/images_fonts/Fold-1/fonts/Poppins-Regular.woff') format('woff'),
+         url('./assets/images_fonts/Fold-1/fonts/Poppins-Regular.ttf') format('truetype'),
+         url('./assets/images_fonts/Fold-1/fonts/Poppins-Regular.eot') format('embedded-opentype'),
+         url('./assets/images_fonts/Fold-1/fonts/Poppins-Regular.svg') format('svg')
+}
+
+@font-face {
+    font-family: 'bebas';
+    src: url('./assets/images_fonts/Fold-2/fonts/BebasNeue-Regular.woff2') format('woff2'),
+         url('./assets/images_fonts/Fold-2/fonts/BebasNeue-Regular.woff') format('woff'),
+         url('./assets/images_fonts/fold-2/fonts/BebasNeue-Regular.ttf') format('truetype'),
+         url('./assets/images_fonts/Fold-2/fonts/BebasNeue-Regular.eot') format('embedded-opentype'),
+         url('./assets/images_fonts/Fold-2/fonts/BebasNeue-Regular.svg') format('svg')
+}
+
+@font-face {
+    font-family: 'interBold';
+    src: url('./assets/images_fonts/Fold-7/fonts/Inter-Bold.woff2') format('woff2'),
+         url('./assets/images_fonts/Fold-7/fonts/BebasNeue-Regular.woff') format('woff'),
+         url('./assets/images_fonts/Fold-7/fonts/Inter-Bold.ttf') format('truetype'),
+         url('./assets/images_fonts/Fold-7/fonts/Inter-Bold.eot') format('embedded-opentype'),
+         url('./assets/images_fonts/Fold-7/fonts/BebasNeue-Regular.svg') format('svg')
+}
+
+.main{
+    z-index: 0;
+    background-image: url('./assets/images/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+.menu, .logo{
+    padding: 10px 20px;
+}
+
+.header{
+    text-align: center;
+    font-family: 'raleway';
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.header h2 {
+    margin-bottom: 10px;
+}
+
+.header p{
+    font-family: 'poppins';
+}
+
+.header button{
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(35, 49, 63, 0.5);
+    border-style: none;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    color: white;
+    bottom: 55px;
+    transform: translate(-50%, 5%);
+    width: 300px;
+    padding: 10px 0;
+}
+
+.content1{
+    background-color: rgba(255,252,248,255);
+    min-height: 300px;
+    padding-bottom: 40px;
+}
+
+.content1 h1{
+    padding: 50px;
+}
+.content1 h1, .content2 h1, .content4 h1, .content5 h1, .content8 h1{
+    color: #b78663;
+}
+.content1 h1, .content2 h1, .content3 h1, .content4 h1, .content5 h1, .content7 h1, .content8 h1{
+    text-align: center;
+    font-family: 'bebas';
+    font-size: 3rem;
+}
+.content3 h1, .content7 h1{
+    color: #ffffff;
+}
+.inner_content_wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.inner_content{
+    height: 105px;
+    width: 390px;
+    word-wrap: break-word;
+    font-family: 'poppins';
+    font-size: 0.8rem;
+}
+
+.inner_content h3{
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+.line {
+    height: 100px; 
+    width: 2px; 
+    background-color: #1b9fb2; 
+    margin: 0 10px; 
+    display: inline-block;
+}
+
+.inner_content h3, .inner_content p {
+    display: inline-block;
+}
+
+.inner_content h3{
+    float: inline-start;
+}
+
+.inv p{
+    text-align: right;
+}
+
+.inv h3{
+    float: inline-end;
+    margin-right: 75px;
+}
+
+.inner_content p{
+    width: 50%;
+}
+
+.card{
+    margin: 0 auto;
+}
+
+.carousel{
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-bottom: 20px;
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.card{
+    scroll-snap-align: start;
+    border-radius: 30px;
+    min-height: 200px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    border-style: none !important;
+}
+
+.card-img-top{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.content2, .content8{
+    background-color: #f8f2ec;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content2 .card-body{
+    background-color: #f8f2ec;
+    padding: 10px !important;
+    font-family: 'poppins';
+}
+.content2 .content2_intro, .content3 .content3_intro, .content4 .content4_intro, .content5 .content5_intro, .content7 .content7_intro{
+    text-align: center;
+}
+.content3_intro, .content7_intro{
+    color: #ffffff;
+}
+.content2 .level_status {
+    color: #a09c94;
+    margin: 0;
+    font-weight: 700;
+}
+
+.content2 .card-title{
+    font-weight: 900;
+}
+
+.content2 .card-text{
+    line-height: 1;
+}
+
+.content2 .book_session{
+    background-color: rgba(35, 49, 63, 0.5);
+    border-style: none;
+    font-size: 1.5rem;
+    color: white;
+    padding: 3px 0;
+    width: 180px;
+    background-color: #19717f;
+    font-family: 'poppins';
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.content2 .book_session img, .content3 .book_session img, .content3 span img{
+    width: 12px;
+    height: 12px;
+}
+
+.content2_learnmore {
+    color:  #19717f;
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+.content3, .content7{
+    position: relative;
+    padding-top: 20px;
+}
+.content3 .bg-image, .content7 .bg-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(10px);
+    position: absolute;
+    z-index: -1;
+    height: 600px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.content3 .carousel{
+    margin-top: 20px;
+}
+.content3 .card{
+    background-color: rgba(255, 255, 255, 2);
+    backdrop-filter: blur(10px);
+}
+
+.content3 .carousel{
+    background: inherit;
+}
+
+.content3 .custom-card, .content7 .custom-card{
+    width: 300px;
+    border: 2px solid rgba(175, 171, 171, 0.4);
+    margin: 0 auto;
+}
+
+.content3 .level_status {
+    color: #8ea7ad;
+    margin: 0;
+    font-weight: 700;
+}
+.content3 .card-title {
+    color: #ffffff;
+    font-weight: 900;
+}
+.content3 .card-text, .content7 .card-text{
+    line-height: 1;
+    color: #ffffff;
+}
+.content3 .book_session{
+    background-color: #ffffff;
+    border-style: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 3px 0;
+    width: 180px;
+    font-family: 'poppins';
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.content3 a{
+    color: white;
+}
+.content3 span{
+    text-decoration: underline;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.content4{
+    padding: 40px 20px;
+}
+.data_para{
+    display: inline-block;
+    text-align: center;
+}
+.data_para span:first-child{
+    display: inline-block;
+    font-size: 2.3rem;
+    color: #19717f;
+    height: 0;
+    font-weight: 700;
+}
+.data_para .month{
+    font-weight: 500;
+    font-size: large;
+    color: #19717f;
+}
+.para_comp{
+    margin-bottom: 0.1rem;
+    font-size: 1.44rem;
+    font-weight: 700;
+    color: #403f35;
+}
+.time_line{
+    height: 13px;
+    margin: 0 5px;
+}
+.date_line, .time_line{
+    background-color: #e2e2e2;
+}
+.content4 .card, .content4 .card-body, .content4 .separate_card_body{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.content4 .separate_card_body{
+    margin: 30px auto;
+}
+.content4 button{
+    width: 180px;
+    padding: 3px 0;
+    font-weight: bold;
+}
+.content4 .footer img{
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+}
+.content5 .left_content{
+    position: relative;
+    background-image: url('./assets/images_fonts/Fold-7/images/si-01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 450px;
+    width: 450px;
+    padding: 35px;
+}
+.content5 .left_right_content{
+    position: absolute;
+    background-image: url('./assets/images_fonts/Fold-7/images/sc-01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 350px;
+    width: 300px;
+    top: 50%;
+    right: -70px;
+    transform: translateY(-50%);
+}
+.content5 .main_content{
+    height: 400px;
+    width: 187px;
+    color: white;
+    font-family: 'Poppins';
+}
+.content5 a{
+    color: white;
+}
+.content5 h2{
+    font-family: 'interBold';
+    font-size: 1.5rem;
+}
+.content5 .content_wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+.content5 .book_session{
+    position: absolute;
+    bottom: -17px; 
+    right: 0;
+    transform: translateX(-25%);
+    width: 210px; 
+    height: 40px; 
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.content5 .right_content{
+    position: relative;
+    background-image: url('./assets/images_fonts/Fold-7/images/si-02.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 450px;
+    width: 450px;
+    padding: 35px;
+}
+.content5 .right_left_content{
+    position: absolute;
+    background-image: url('./assets/images_fonts/Fold-7/images/sc-02.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 350px;
+    width: 300px;
+    top: 50%;
+    left: -70px;
+    transform: translateY(-50%);
+}
+.content5 .right_content .main_content{
+    margin-left: 210px;
+}
+.content5 .content_wrapper p{
+    line-height: 1;
+}
+.content6{
+    padding: 80px;
+    background-color: #fffcf8;
+}
+.content6 a{
+    color: #166f7d;
+    font-weight: 700;
+}
+.content6 .card-title{
+    color: #b78663;
+    font-family: 'bebas';
+    font-size: 2.5rem;
+}
+.content7 .custom-card{
+    position: relative;
+}
+.content7 .card-text{
+    line-height: 1.5;
+}
+.content7 .start_qoute{
+    position: absolute;
+    width: 50px;
+    top: 205px;
+    height: 35px;
+    left: 13px;
+}
+.content7 .end_qoute{
+    top: 356px;
+    position: absolute;
+    left: 165px;
+    width: 50px;
+    height: 35px;
+}
+.content7 span{
+    color: white;
+    font-weight: 600;
+}
+
+/* footer section */
+.bottom_footer{
+    padding: 30px 0;
+    text-align: center;
+    font-weight: 600;
+}
+.copyright_footer{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+.collab_footer{
+    background-color: rgba(18,81,90,255);
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+.collab_footer img{
+    color: white;
+    width: 140px;
+    height: 65px 
+}
+.built_by{
+    color: #23a2b5;
+}
+.collab_with{
+    color: #d5ccb8;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+ul li{
+    margin-bottom: 10px;
+}
+.main_footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    color: white;
+    background-color: rgba(18,81,90,255);
+}
+.main_footer hr{
+    border-top: 1.5px solid rgba(0,0,0,.1);
+    background-color: white;
+}
+.icon_footer{
+    display: flex;
+    background-color: rgba(18,81,90,255);
+    padding: 20px 0;
+}
+.icon_footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+i{
+    font-size: 2rem;
+    font-weight: 100;
+    border: 1.5px solid white;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+}
+/* media query */
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0 0 50px 0;
+    }
+    .header {
+        margin: 50px auto;
+        font-size: 1.2rem;
+    }
+    .header > *:not(button) {
+        text-align: left;
+    }
+    .inner_content{
+        font-size: 0.7rem;
+    }
+    .inner_content:not(.inv){
+        width: 300px;
+    }
+    
+    .inner_content p:not(.inv p){
+        width: 60%;
+    }
+    .logo{
+        width: 150px;
+        height: 150px;
+    }
+    .menu, .logo{
+        padding: 20px 30px;
+    }
+    .header{
+        font-size: 1rem;
+    }
+    .content2, .content3, .content7, .content8{
+        padding: 40px 20px;
+    }
+    .content2 h1, .content4 h1, .content5 h1 .content2 .content2_intro, .content3 h1, .content3 .content3_intro, 
+    .content4 .content4_intro, .content7 .content7_intro, .content7 h1, .content8 .content8_intro, .content8 h1{
+        text-align: left;
+    }
+    .content3 .bg-image{
+        height: 650px;
+    }
+    .content5 .content_wrapper{
+        padding: 0;
+    }
+    .content5 .left_content{
+        margin-right: auto;
+        width: 400px;
+    }
+    .content5 .left_right_content{
+        width: 250px;
+    }
+    .content5 .right_content{
+        margin-left: auto;
+        width: 400px;
+    }
+    .content5 .right_left_content{
+        width: 250px;
+    }
+    .content5 .right_content .main_content {
+        margin-left: 170px;
+    }
+    .content5 .book_session{
+        width: 170px;
+        font-size: 1.2rem;
+    }
+    .content5 .book_session img{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .inner_content_wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .inner_content{
+        margin: 0 auto;
+    }
+    .content5 .content_wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .header {
+        font-size: 0.8rem;
+    }
+    .header button{
+        width: 200px;
+        font-size: 1.2rem;
+    }
+    .content2_learnmore{
+        font-size: 1rem;
+    }
+    .content2 .book_session{
+        font-size: 0.9rem;
+        width: 140px;
+    }
+    .content3 .bg-image{
+        height: 650px;
+    }
+}
+
+@media (max-width: 400px) {
+    .content4 .card{
+        width: 300px !important;
+    }
+    .data_para span:first-child{
+        font-size: 1.5rem;
+    }
+    .content4 .para_comp{
+        font-size: 1.20rem;
+    }
+    .content4 .time_para, .content4 .data_para{
+        font-size: 0.8rem;
+    }
+    .content4 .separate_card_body{
+        width: 300px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .content4 .card{
+        width: 280px !important;
+    }
+    .data_para span:first-child{
+        font-size: 1.5rem;
+    }
+    .content4 .para_comp{
+        font-size: 1.10rem;
+    }
+    .content4 .time_para, .content4 .data_para{
+        font-size: 0.8rem;
+    }
+    .content4 .separate_card_body{
+        width: 280px !important;
+    }
+}
+
+@media (max-width: 490px) {
+    .content5 .left_content{
+        margin-right: auto;
+        width: 350px;
+    }
+    .content5 .left_right_content{
+        width: 250px;
+    }
+    .content5 .right_content{
+        margin-left: auto;
+        width: 350px;
+    }
+    .content5 .right_left_content{
+        width: 250px;
+    }
+    .content5 .right_content .main_content {
+        margin-left: 170px;
+    }
+}
+@media (max-width: 490px) {
+    .content5 .left_content{
+        margin-right: auto;
+        width: 320px;
+        height: 400px;
+    }
+    .content5 .left_right_content{
+        width: 200px;
+        height: 300px;
+    }
+    .content5 .right_content{
+        margin-left: auto;
+        width: 320px;
+        height: 400px;
+    }
+    .content5 .right_left_content{
+        width: 200px;
+        height: 300px;
+    }
+    .content5 .right_content .main_content {
+        margin-left: 170px;
+    }
+    .content5 .book_session{
+        width: 140px;
+        font-size: 1rem;
+    }
+}
