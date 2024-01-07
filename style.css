@@ -203,7 +203,7 @@ body {
 .card-img-top{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-.content2, .content8{
+.content2, .content8, .content5{
     background-color: #f8f2ec;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -374,6 +374,9 @@ body {
     height: 12px;
     margin-left: 5px;
 }
+.content5{
+    padding-bottom: 50px;
+}
 .content5 .left_content{
     position: relative;
     background-image: url('./assets/images_fonts/Fold-7/images/si-01.jpg');
@@ -383,6 +386,7 @@ body {
     height: 450px;
     width: 450px;
     padding: 35px;
+    margin-bottom: 30px;
 }
 .content5 .left_right_content{
     position: absolute;
@@ -557,6 +561,9 @@ i{
     padding: 8px 12px;
     border-radius: 50%;
 }
+.icon_footer h2{
+    color: white;
+}
 /* media query */
 @media (max-width: 600px) {
     .main {
@@ -681,6 +688,28 @@ i{
     }
     .content4 .separate_card_body{
         width: 300px !important;
+    }
+    .collab_footer img{
+        height: 55px;
+        width: 110px;
+    }
+    .built_by, .collab_with{
+        font-size: 1.40rem;
+    }
+    .icon_footer h2{
+        font-size: 1rem;
+    }
+    i{
+        font-size: 0.8rem;
+    }
+    .main_footer{
+        padding: 20px;
+    }
+    .main_footer h2{
+        font-size: 1rem;
+    }
+    .main_footer li{
+        font-size: 0.8rem;
     }
 }
 
